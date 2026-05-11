@@ -63,3 +63,7 @@ def compare_products(req: CompareRequest):
         "competitors_compared": len(results),
         "results": results
     }
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
